@@ -1,0 +1,22 @@
+import random
+pc_secim=random.randint(0,3)
+degerler=["tas","kagıt","makas"]
+#tas=1 kagıt=2  makas=3
+print("Seçimleri yanlarındaki degerleri yazarak seçin")
+print(" Tas=1 \n Kagıt=2 \n Makas=3 ")
+kullanici_secim=int(input("Tercih no="))
+durum="Belirtilen sayılardan birini giriniz"
+
+if kullanici_secim <4 and kullanici_secim > 0 :
+    durum="Tercihiniz= "+degerler[kullanici_secim-1]+" Pc Tercih="+degerler[pc_secim]+" "
+    if pc_secim != kullanici_secim-1:
+        if pc_secim==0 and kullanici_secim==3:
+            durum+="kaybettiniz"
+        elif pc_secim==1 and kullanici_secim==1:
+            durum+="kaybettiniz"
+        elif pc_secim==2 and kullanici_secim==2:
+            durum+="kaybettiniz"
+        else:
+            durum+="kazandınız"
+    else : durum="Berabere"     
+print(durum)
